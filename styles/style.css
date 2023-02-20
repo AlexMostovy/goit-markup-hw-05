@@ -103,7 +103,7 @@ button {
   display: flex;
 }
 
-.current:after {
+.current::after {
   content: "";
   position: absolute;
   background: #4d5ae5;
