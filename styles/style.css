@@ -76,9 +76,9 @@ button {
   font-style: normal;
 }
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-nav {
@@ -86,6 +86,8 @@ button {
   margin-right: auto;
 }
 .header-nav-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
@@ -93,8 +95,26 @@ button {
   color: var(--primarybrand-color);
 }
 .header-nav-item {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header-nav-box {
+  display: flex;
 }
 
+.header-nav-links.current:after {
+  content: "";
+  position: absolute;
+  background: #4d5ae5;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: -1px;
+  left: 0;
+  pointer-events: none;
+}
 .header-nav-list {
   display: flex;
   gap: 40px;
@@ -106,10 +126,11 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  transition: 250ms;
 }
 .header-nav-links:is(:hover, :focus) {
   color: var(--pressedstate-color);
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address {
@@ -124,6 +145,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  transition: 250ms;
 }
 .address-mail {
 }
@@ -131,7 +153,7 @@ button {
 }
 .header-address-letterr:is(:hover, :focus) {
   color: var(--pressedstate-color);
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address-contact {
@@ -186,10 +208,11 @@ button {
   color: #ffffff;
   background: var(--primarybrand-color);
   cursor: pointer;
+  transition: 250ms;
 }
 .hero-button:is(:hover, :focus) {
   background-color: var(--pressedstate-color);
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .scrolls {
@@ -304,13 +327,14 @@ button {
   justify-content: center;
   align-items: center;
   background-color: #4d5ae5;
+  transition: 250ms;
 }
 .team-soc-icon {
   fill: #f4f4fd;
 }
 .team-soc-link:is(:hover, :focus) {
   background-color: #404bbf;
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-footer {
@@ -355,11 +379,12 @@ button {
 }
 .custom-sec-link:is(:hover, :focus) .custom-sec-icon {
   fill: #404bbf;
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .custom-sec-icon {
   fill: #afb1b8;
+  transition: 250ms;
 }
 .footer-item-icon {
   width: 40px;
@@ -373,6 +398,7 @@ button {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: 250ms;
 }
 .footer-icon {
   width: 24px;
@@ -389,7 +415,7 @@ button {
 }
 .footer-link-icon:is(:hover, :focus) {
   background: #31d0aa;
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-team-subtitle {
@@ -526,6 +552,7 @@ button {
   background: #f4f4fd;
   cursor: pointer;
   border: 0;
+  transition: 250ms;
 }
 .btn:is(:hover, :focus) {
   color: #ffffff;
@@ -533,7 +560,7 @@ button {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-prt-list {
@@ -631,23 +658,24 @@ button {
   transition: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close {
+.modal-close-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
-
+  padding: 0;
   width: 24px;
-  height: 24px;
+  min-height: 24px;
+  transition: 250ms;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 50%;
 }
-.modal-close:is(:hover, :focus) {
+.modal-close-btn:is(:hover, :focus) {
   background-color: #404bbf;
   fill: #ffffff;
-  transition: 250ms;
+
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -667,5 +695,5 @@ button {
 .is-hidden {
   opacity: 0;
   visibility: hidden;
-  pointer-events: no;
+  pointer-events: none;
 }

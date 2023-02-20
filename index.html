@@ -21,25 +21,34 @@
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
-          <a class="header-nav-link text-raleway" href="./index.html"
-            >WEB<span class="logo-header">STUDIO</span></a
-          >
-          <ul class="header-nav-list list">
-            <li class="header-nav-item">
-              <a class="header-nav-links text-roboto" href="./index.html"
-                >Studio</a
-              >
-            </li>
-            <li class="header-nav-item">
-              <a class="header-nav-links text-roboto" href="./portfolio.html"
-                >Portfolio</a
-              >
-            </li>
-            <li class="header-nav-item">
-              <a class="header-nav-links text-roboto" href="">Contacts</a>
-            </li>
-          </ul>
+          <div class="header-nav-box">
+            <a class="header-nav-link text-raleway" href="./index.html"
+              >WEB<span class="logo-header">STUDIO</span></a
+            >
+            <ul class="header-nav-list list">
+              <li class="header-nav-item">
+                <a
+                  class="header-nav-links current text-roboto"
+                  href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="header-nav-item">
+                <a
+                  class="header-nav-links current text-roboto"
+                  href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-links current text-roboto" href=""
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
+
         <address class="header-address">
           <ul class="header-address-list list">
             <li class="header-address-contact link">
@@ -441,14 +450,10 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button
-          type="button"
-          class="modal-close"
-          data-modal-close="data-modal-close"
-        >
-          <svg class="modal-icon">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-icon" width="16" height="16">
             <use
               href="./images/symbol-defs.svg#icon-close-black-18dp-2-1-1"
             ></use>
