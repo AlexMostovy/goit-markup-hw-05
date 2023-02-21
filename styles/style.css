@@ -6,6 +6,7 @@ body {
 }
 
 :root {
+  --transition-fun: cubic-bezier(0.4, 0, 0.2, 1);
   --primarybrand-color: #4d5ae5;
   --pressedstate-color: #404bbf;
   --dark-color: #2e2f42;
@@ -16,6 +17,7 @@ body {
   --light-color: #f4f4fd;
   --modaloverlay-color: #2e2f4266;
   --herobgr-color: #2e2f42b2;
+  --current-color: #9747ff;
   --lggrad-color: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 
@@ -106,7 +108,7 @@ button {
 .current::after {
   content: "";
   position: absolute;
-  background: #4d5ae5;
+  background: var(--current-color);
   border-radius: 2px;
   display: block;
   width: 100%;
@@ -121,6 +123,7 @@ button {
   margin-left: 76px;
 }
 .header-nav-links {
+  transition-property: color, 250ms, var(--transition-fun);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -130,8 +133,6 @@ button {
 }
 .header-nav-links:is(:hover, :focus) {
   color: var(--pressedstate-color);
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address {
 }
@@ -140,12 +141,12 @@ button {
   gap: 40px;
 }
 .header-address-letterr {
+  transition-property: color, 250ms, var(--transition-fun);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
-  transition: 250ms;
 }
 .address-mail {
 }
@@ -153,8 +154,6 @@ button {
 }
 .header-address-letterr:is(:hover, :focus) {
   color: var(--pressedstate-color);
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address-contact {
 }
@@ -198,6 +197,7 @@ button {
   border: 0;
 }
 .hero-button {
+  transition-property: background-color, 250ms, var(--transition-fun);
   margin-left: auto;
   margin-right: auto;
   margin-top: 48px;
@@ -212,8 +212,6 @@ button {
 }
 .hero-button:is(:hover, :focus) {
   background-color: var(--pressedstate-color);
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .scrolls {
   padding-top: 120px;
@@ -320,6 +318,7 @@ button {
   height: 40px;
 }
 .team-soc-link {
+  transition-property: background-color, 250ms, var(--transition-fun);
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -334,8 +333,6 @@ button {
 }
 .team-soc-link:is(:hover, :focus) {
   background-color: #404bbf;
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-footer {
   margin-left: 120px;
@@ -366,6 +363,7 @@ button {
   height: 88px;
 }
 .custom-sec-link {
+  transition-property: border-color, 250ms, fill, var(--transition-fun);
   width: 100%;
   height: 100%;
   border: 1px solid #8e8f99;
@@ -379,12 +377,10 @@ button {
 }
 .custom-sec-link:is(:hover, :focus) .custom-sec-icon {
   fill: #404bbf;
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .custom-sec-icon {
-  fill: #afb1b8;
   transition: 250ms;
+  fill: #afb1b8;
 }
 .footer-item-icon {
   width: 40px;
@@ -398,7 +394,6 @@ button {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: 250ms;
 }
 .footer-icon {
   width: 24px;
@@ -406,6 +401,7 @@ button {
   fill: #f4f4fd;
 }
 .text-footer-icon {
+  transition-property: background, transition, var(--transition-fun);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -415,8 +411,7 @@ button {
 }
 .footer-link-icon:is(:hover, :focus) {
   background: #31d0aa;
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 .sec-team-subtitle {
   margin-bottom: 72px;
@@ -543,6 +538,8 @@ button {
 }
 
 .btn {
+  transition-property: color, background-color, transition, box-shadow,
+    border-radius, var(--transition-fun);
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -552,7 +549,6 @@ button {
   background: #f4f4fd;
   cursor: pointer;
   border: 0;
-  transition: 250ms;
 }
 .btn:is(:hover, :focus) {
   color: #ffffff;
@@ -560,8 +556,7 @@ button {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 .main-prt-list {
   display: flex;
@@ -580,6 +575,7 @@ button {
   transform: translateY(0);
 }
 .gallery-text-wrap {
+  transition-property: transform;
   position: absolute;
   top: 0px;
   padding: 40px 32px;
@@ -594,6 +590,7 @@ button {
   transition: transform 250ms;
 }
 .gallery-item-link {
+  transition-property: box-shadow;
   display: block;
 }
 .gallery-item-link:is(:hover, :focus) {
@@ -656,9 +653,10 @@ button {
   width: 100%;
   background: rgba(46, 47, 66, 0.4);
   transition: 250ms;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--transition-fun);
 }
 .modal-close-btn {
+  transition-property: background-color, fill, var(--transition-fun);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -675,8 +673,6 @@ button {
 .modal-close-btn:is(:hover, :focus) {
   background-color: #404bbf;
   fill: #ffffff;
-
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
