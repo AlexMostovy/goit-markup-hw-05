@@ -104,11 +104,13 @@ button {
 .header-nav-box {
   display: flex;
 }
-
+.current {
+  color: var(--primarybrand-color);
+}
 .current::after {
   content: "";
   position: absolute;
-  background: var(--current-color);
+  background-color: var(--primarybrand-color);
   border-radius: 2px;
   display: block;
   width: 100%;
@@ -669,6 +671,7 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 50%;
+  margin-bottom: 24px;
 }
 .modal-close-btn:is(:hover, :focus) {
   background-color: #404bbf;
@@ -692,4 +695,14 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.modal-title {
 }
